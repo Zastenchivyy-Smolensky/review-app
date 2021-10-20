@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get '/top' => "index#top"
-  get '/about' => "index#about"
-  
+  root "index#top"
+  get 'index/top'
+  get 'index/about'
+  get "index/help"
 end
