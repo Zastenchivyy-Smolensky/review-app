@@ -4,7 +4,7 @@ class IndexControllerTest < ActionDispatch::IntegrationTest
   test "should get top" do
     get index_top_url
     assert_response :success
-    assert_select "title","Top | home"
+    assert_select "title","home"
   end
   test "should get about" do
     get index_about_url
