@@ -2,18 +2,23 @@ require "test_helper"
 
 class IndexControllerTest < ActionDispatch::IntegrationTest
   test "should get top" do
-    get index_top_url
+    get root_path
     assert_response :success
     assert_select "title","home"
   end
   test "should get about" do
-    get index_about_url
+    get about_path
     assert_response :success
     assert_select "title","About | home"
   end
   test "should get help" do
-    get index_help_url
+    get help_path
     assert_response :success
     assert_select "title","Help | home"
+  end
+  test "should get contact" do
+    get contact_path
+    assert_response :success
+    assert_select "title","Contact | home"
   end
 end
