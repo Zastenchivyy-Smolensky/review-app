@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'users/new'
-  get 'user/new'
+  
   root "index#top"
   get "/help",  to:"index#help"
   get "/about", to:"index#about"
